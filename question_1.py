@@ -29,6 +29,7 @@ unique_colors = set(new_list)
 # determining the mean colour
 def mean():
     freq_dict = {i:new_list.count(i) for i in unique_colors}
+    print(freq_dict)
     mean_index = (sum(freq_dict.values())) // 2
     return f"the mean is {sorted(new_list)[mean_index]}"
 
