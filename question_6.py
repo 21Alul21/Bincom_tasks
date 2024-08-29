@@ -4,6 +4,7 @@ postgresql database
 
 import psycopg2
 from collections import Counter
+import os
 
 # Color frequency data
 color_frequencies = {
@@ -30,9 +31,9 @@ def save_to_postgresql(color_frequencies):
         conn = psycopg2.connect(
             dbname="defaultdb",
             user="avnadmin",
-            password="AVNS_r5oGvveXjdxGHP2c0YE",
-            host="austin-ahng.f.aivencloud.com",
-            port="22211",
+            password= os.environ.get("PASSWORD"),
+            host=os.environ.get("HOST"),
+            port=os.environ.get("PORT"),
             sslmode="require"
         )
         cursor = conn.cursor()
