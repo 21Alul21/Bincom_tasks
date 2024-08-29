@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """module for saving the colur and frequencies to a 
 postgresql database
 """
@@ -70,3 +71,5 @@ def save_to_postgresql(color_frequencies):
 
 # Call the function to save data
 save_to_postgresql(color_frequencies)
+=======
+>>>>>>> parent of ac469bc (added file for saving color and frequencies to postgresql db)
